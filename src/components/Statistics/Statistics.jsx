@@ -28,7 +28,7 @@ export const Statistics = ({
       </Item>
       <Item>
         <FeedbackType>
-          total: <FeedbackAmount>{total}</FeedbackAmount>
+          Total: <FeedbackAmount>{total}</FeedbackAmount>
         </FeedbackType>
       </Item>
       <Item>
