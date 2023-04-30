@@ -12,22 +12,10 @@ export class App extends React.Component {
     bad: 0,
   };
 
-  handleIncrement = e => {
-    if (e.target.textContent === 'Good') {
-      this.setState(prevState => {
-        return { good: prevState.good + 1 };
-      });
-    }
-    if (e.target.textContent === 'Neutral') {
-      this.setState(prevState => {
-        return { neutral: prevState.neutral + 1 };
-      });
-    }
-    if (e.target.textContent === 'Bad') {
-      this.setState(prevState => {
-        return { bad: prevState.bad + 1 };
-      });
-    }
+  handleIncrement = name => {
+    this.setState(prevState => {
+      return { [name]: prevState[name] + 1 };
+    });
   };
 
   countTotalFeedback = () => {
